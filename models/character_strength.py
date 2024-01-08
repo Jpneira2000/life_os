@@ -1,12 +1,12 @@
 from config.database import Base
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Text
 
 class CharacterStrengthModel(Base):
 
-    __tablename__ = 'character_strengths'
+    __tablename__ = 'CharacterStrength'
 
-    id = Column(Integer, primary_key=True)
-    strength = Column(String)
-    degree = Column(String)
+    CharacterStrength_id = Column(Integer, primary_key=True)
+    character_strength = Column(String)
+    strength_level = Column(String)
     type = Column(String)
-    description = Column(String)
+    description = Column(Text)
